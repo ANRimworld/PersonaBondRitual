@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "K3rFEGIEEMmiS+iRj22KDAHCwh8sHL8MNEwI6tWX5uTnmz/oy0vKhXN5M/f4jjCYwq2vLOuekGP3FnbC1Gn7Lg==",
+  "success": true,
+  "projectFilePath": "C:\\Rimworld_Debug\\RimWorld\\Mods\\PersonaBondRitual\\1.3\\Source\\PersonaBond\\AlphaMemes\\PersonaBond.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Allie\\.nuget\\packages\\krafs.rimworld.ref\\1.3.3389\\krafs.rimworld.ref.1.3.3389.nupkg.sha512",
+    "C:\\Users\\Allie\\.nuget\\packages\\lib.harmony\\2.2.1\\lib.harmony.2.2.1.nupkg.sha512"
+  ],
+  "logs": []
+}

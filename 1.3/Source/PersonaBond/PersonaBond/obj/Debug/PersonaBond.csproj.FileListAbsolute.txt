@@ -1,0 +1,2 @@
+C:\Rimworld_Debug\RimWorld\Mods\PersonaBondRitual\1.3\Source\PersonaBond\AlphaMemes\obj\Debug\PersonaBond.csproj.AssemblyReference.cache
+C:\Rimworld_Debug\RimWorld\Mods\PersonaBondRitual\1.3\Source\PersonaBond\AlphaMemes\obj\Debug\PersonaBond.csproj.CoreCompileInputs.cache

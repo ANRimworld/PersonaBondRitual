@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	
+	
+	<!--Ritual Pattern-->
+	<RitualPatternDef>
+		<defName>VPWE_BondRitual_Pattern</defName>
+		<ritualExplanation>A ceremeony of the formation of a bond between weapon and owner. The future of their bond depends on good first impressions</ritualExplanation>
+		<ritualObligationTargetFilter>VPWE_BondRitualTarget</ritualObligationTargetFilter>
+		<ritualBehavior>VPWE_BondRitualBehavior</ritualBehavior>
+		<alwaysStartAnytime>true</alwaysStartAnytime>
+		<ritualOutcomeEffect>VPWE_BondRitualOutcome</ritualOutcomeEffect>
+	</RitualPatternDef>
+
+	<!--Ritual Behavior-->
+	<RitualBehaviorDef>
+		<defName>VPWE_BondRitualBehavior</defName>
+		<durationTicks>5000</durationTicks>
+		<workerClass>AlphaMemes.RitualBehaviorWorker_BondRitual</workerClass>
+		<roles>
+		  <li Class="AlphaMemes.RitualRoleBonder">
+			<label>bonder</label>
+			<id>VPWE_Bonder</id>
+			<maxCount>1</maxCount>
+			<substitutable>True</substitutable>
+			<required>True</required>
+			<countsAsParticipant>False</countsAsParticipant>
+		  </li>
+		</roles>
+		<stages>
+			<li Class="RitualStage_WaitingForParticipants">
+				<defaultDuty>Spectate</defaultDuty>
+				<endTriggers>
+					<li Class="StageEndTrigger_RolesArrived">
+						<roleIds>
+						  <li>VPWE_Bonder</li>
+						</roleIds>
+					</li>	
+				</endTriggers>				
+				<roleBehaviors>
+				  <li>
+					<roleId>VPWE_Bonder</roleId>
+					<dutyDef>VPWE_TakeWeaponToCell</dutyDef>
+				  </li>					  
+				</roleBehaviors>
+			</li>    
+			<li>
+				<defaultDuty>Spectate</defaultDuty>
+				<endTriggers>
+				  <li Class="StageEndTrigger_DurationPercentage">
+					<percentage>0.3</percentage>
+				  </li>
+				</endTriggers>
+				<roleBehaviors>
+				  <li>
+					<roleId>VPWE_Bonder</roleId>
+					<dutyDef>VPWE_BondCustomize</dutyDef>
+					<speakerInteraction>Speech_Duel</speakerInteraction>
+					<customPositions>
+					  <li Class="RitualPosition_Lectern">
+						<maxDistanceToFocus>5</maxDistanceToFocus>
+					  </li>
+					  <li Class="RitualPosition_OnInteractionCell" />
+					</customPositions>
+				  </li>
+				</roleBehaviors>
+				<visualEffectDef>Speech</visualEffectDef>
+				<postAction Class="RitualStageAction_Message">
+					<text>{0}: The speech is over, the bonding is beginning</text>
+					<messageTypeDef>NeutralEvent</messageTypeDef>
+				</postAction>				
+			</li>
+			<li>
+				<defaultDuty>Spectate</defaultDuty>
+				<endTriggers>
+				  <li Class="StageEndTrigger_DurationPercentage">
+					<percentage>0.7</percentage>
+				  </li>
+				</endTriggers>
+				<spectateDistanceOverride>3~4</spectateDistanceOverride>
+				<roleBehaviors>
+				  <li>
+					<roleId>VPWE_Bonder</roleId>
+					<dutyDef>VPWE_Bonding</dutyDef>
+					<customPositions>
+					  <li Class="RitualPosition_Lectern">
+						<maxDistanceToFocus>5</maxDistanceToFocus>
+					  </li>
+					  <li Class="RitualPosition_OnInteractionCell" />
+					</customPositions>
+				  </li>		
+				</roleBehaviors>
+				<visualEffectDef>Speech</visualEffectDef>
+			</li>
+		</stages>
+  </RitualBehaviorDef>
+   
+
+
+
+   
+  <!--Ritual Outcome-->
+    <RitualOutcomeEffectDef>
+	<defName>VPWE_BondRitualOutcome</defName>
+    <description>Depending on ritual quality, participants will get between {MINMOOD} and {MAXMOOD} mood for {MOODDAYS} days.</description>
+    <workerClass>AlphaMemes.RitualOutcomeEffectWorker_Persona</workerClass>
+    <allowAttachableOutcome>false</allowAttachableOutcome>
+	<startingQuality>0.25</startingQuality>
+    <outcomeChances>
+      <li>
+        <label>Terrible</label>
+        <chance>0.25</chance>
+        <memory>TerribleFestival</memory>
+        <description>The {0} was lackluster. The speech was long-winded and did not honour them.</description>
+        <positivityIndex>-1</positivityIndex>
+      </li>
+      <li>
+        <label>Normal</label>
+        <chance>0.5</chance>
+        <memory>FunFestival</memory>
+        <description>The {0} was good. The speaker's final words provided a path for everyone to move on.</description>
+        <positivityIndex>1</positivityIndex>
+      </li>
+      <li>
+        <label>Amazing</label>
+        <chance>0.25</chance>
+        <memory>UnforgettableFestival</memory>
+        <description>The {0} was heartwarming. The speech was captivating and heartfelt, and everyone came away focused on good memories.</description>
+        <positivityIndex>2</positivityIndex>
+      </li>
+    </outcomeChances>
+	<comps>
+	<li Class="AlphaMemes.RitualOutcomeComp_BondTraits">
+		<label>bond strength</label>
+	</li>
+    </comps>
+  </RitualOutcomeEffectDef>
+ 
+   <!--Ritual Obligation-->	
+	<RitualObligationTargetFilterDef>
+		<defName>VPWE_BondRitualTarget</defName>
+		<workerClass>AlphaMemes.RitualObligationTargetWorker_Persona</workerClass>		
+	</RitualObligationTargetFilterDef>
+	
+
+</Defs>

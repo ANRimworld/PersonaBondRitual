@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	
+  <WeaponTraitDef>
+    <defName>VPWE_BadBond</defName>
+    <label>Terrible bond</label>
+    <description>This weapon has rejected its bonded partner. They work terribly together</description>
+    <commonality>0.0000001</commonality> <!--It wont let it be 0 so astromically rare will hopefully solve it-->
+	<workerClass>AlphaMemes.WeaponTraitWorker_Bonds</workerClass>
+	<equippedStatOffsets>
+      <MeleeWeapon_DamageMultiplier>-0.15</MeleeWeapon_DamageMultiplier>
+    </equippedStatOffsets>
+    <marketValueOffset>-600</marketValueOffset>
+    <exclusionTags>
+      <li>NeverBond</li>
+    </exclusionTags>
+  </WeaponTraitDef>
+  <ThoughtDef>
+    <defName>VPWE_ThoughtWeaponsHate</defName>
+	<validWhileDespawned>true</validWhileDespawned>
+    <workerClass>AlphaMemes.ThoughtWorker_WeaponTraitBonded</workerClass>
+    <stages>
+      <li>
+        <label>{WEAPON}'s Hate</label>
+        <description>I talked to {WEAPON}; it hates me.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <WeaponTraitDef>
+    <defName>VPWE_AmazingBond</defName>
+    <label>True bond</label>
+    <description>This weapon has formed a perfect bond. They move perfectly as one.</description>
+    <commonality>0.0000001</commonality>
+	<workerClass>AlphaMemes.WeaponTraitWorker_Bonds</workerClass>
+	<equippedStatOffsets>
+      <MeleeWeapon_DamageMultiplier>0.15</MeleeWeapon_DamageMultiplier>
+	  <MeleeHitChance>0.10</MeleeHitChance>
+    </equippedStatOffsets>
+    <marketValueOffset>600</marketValueOffset>
+    <exclusionTags>
+      <li>NeverBond</li>
+    </exclusionTags>
+  </WeaponTraitDef>
+  <ThoughtDef>
+    <defName>VPWE_ThoughtWeaponTrueBond</defName>
+	<validWhileDespawned>true</validWhileDespawned>
+    <workerClass>AlphaMemes.ThoughtWorker_WeaponTraitBonded</workerClass>
+    <stages>
+      <li>
+        <label>{WEAPON}'s true bond</label>
+        <description>My bonded weapon {WEAPON} is the perfect match, we are one.</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>
