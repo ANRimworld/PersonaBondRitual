@@ -5,23 +5,23 @@
 	
 	<!--Ritual Pattern-->
 	<RitualPatternDef>
-		<defName>VPWE_BondRitual_Pattern</defName>
+		<defName>PB_BondRitual_Pattern</defName>
 		<ritualExplanation>A ceremeony of the formation of a bond between weapon and owner. The future of their bond depends on good first impressions</ritualExplanation>
-		<ritualObligationTargetFilter>VPWE_BondRitualTarget</ritualObligationTargetFilter>
-		<ritualBehavior>VPWE_BondRitualBehavior</ritualBehavior>
+		<ritualObligationTargetFilter>PB_BondRitualTarget</ritualObligationTargetFilter>
+		<ritualBehavior>PB_BondRitualBehavior</ritualBehavior>
 		<alwaysStartAnytime>true</alwaysStartAnytime>
-		<ritualOutcomeEffect>VPWE_BondRitualOutcome</ritualOutcomeEffect>
+		<ritualOutcomeEffect>PB_BondRitualOutcome</ritualOutcomeEffect>
 	</RitualPatternDef>
 
 	<!--Ritual Behavior-->
 	<RitualBehaviorDef>
-		<defName>VPWE_BondRitualBehavior</defName>
+		<defName>PB_BondRitualBehavior</defName>
 		<durationTicks>5000</durationTicks>
-		<workerClass>AlphaMemes.RitualBehaviorWorker_BondRitual</workerClass>
+		<workerClass>PersonaBond.RitualBehaviorWorker_BondRitual</workerClass>
 		<roles>
-		  <li Class="AlphaMemes.RitualRoleBonder">
+		  <li Class="PersonaBond.RitualRoleBonder">
 			<label>bonder</label>
-			<id>VPWE_Bonder</id>
+			<id>PB_Bonder</id>
 			<maxCount>1</maxCount>
 			<substitutable>True</substitutable>
 			<required>True</required>
@@ -34,14 +34,14 @@
 				<endTriggers>
 					<li Class="StageEndTrigger_RolesArrived">
 						<roleIds>
-						  <li>VPWE_Bonder</li>
+						  <li>PB_Bonder</li>
 						</roleIds>
 					</li>	
 				</endTriggers>				
 				<roleBehaviors>
 				  <li>
-					<roleId>VPWE_Bonder</roleId>
-					<dutyDef>VPWE_TakeWeaponToCell</dutyDef>
+					<roleId>PB_Bonder</roleId>
+					<dutyDef>PB_TakeWeaponToCell</dutyDef>
 				  </li>					  
 				</roleBehaviors>
 			</li>    
@@ -54,8 +54,8 @@
 				</endTriggers>
 				<roleBehaviors>
 				  <li>
-					<roleId>VPWE_Bonder</roleId>
-					<dutyDef>VPWE_BondCustomize</dutyDef>
+					<roleId>PB_Bonder</roleId>
+					<dutyDef>PB_BondCustomize</dutyDef>
 					<speakerInteraction>Speech_Duel</speakerInteraction>
 					<customPositions>
 					  <li Class="RitualPosition_Lectern">
@@ -81,8 +81,8 @@
 				<spectateDistanceOverride>3~4</spectateDistanceOverride>
 				<roleBehaviors>
 				  <li>
-					<roleId>VPWE_Bonder</roleId>
-					<dutyDef>VPWE_Bonding</dutyDef>
+					<roleId>PB_Bonder</roleId>
+					<dutyDef>PB_Bonding</dutyDef>
 					<customPositions>
 					  <li Class="RitualPosition_Lectern">
 						<maxDistanceToFocus>5</maxDistanceToFocus>
@@ -102,9 +102,9 @@
    
   <!--Ritual Outcome-->
     <RitualOutcomeEffectDef>
-	<defName>VPWE_BondRitualOutcome</defName>
+	<defName>PB_BondRitualOutcome</defName>
     <description>Depending on ritual quality, participants will get between {MINMOOD} and {MAXMOOD} mood for {MOODDAYS} days.</description>
-    <workerClass>AlphaMemes.RitualOutcomeEffectWorker_Persona</workerClass>
+    <workerClass>PersonaBond.RitualOutcomeEffectWorker_Persona</workerClass>
     <allowAttachableOutcome>false</allowAttachableOutcome>
 	<startingQuality>0.25</startingQuality>
     <outcomeChances>
@@ -131,7 +131,7 @@
       </li>
     </outcomeChances>
 	<comps>
-	<li Class="AlphaMemes.RitualOutcomeComp_BondTraits">
+	<li Class="PersonaBond.RitualOutcomeComp_BondTraits">
 		<label>bond strength</label>
 	</li>
     </comps>
@@ -139,8 +139,8 @@
  
    <!--Ritual Obligation-->	
 	<RitualObligationTargetFilterDef>
-		<defName>VPWE_BondRitualTarget</defName>
-		<workerClass>AlphaMemes.RitualObligationTargetWorker_Persona</workerClass>		
+		<defName>PB_BondRitualTarget</defName>
+		<workerClass>PersonaBond.RitualObligationTargetWorker_Persona</workerClass>		
 	</RitualObligationTargetFilterDef>
 	
 

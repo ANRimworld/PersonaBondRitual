@@ -22,7 +22,7 @@ namespace PersonaBond
 
         public override void TryExecuteOn(TargetInfo target, Pawn organizer, Precept_Ritual ritual, RitualObligation obligation, RitualRoleAssignments assignments, bool playerForced = false)
         {
-            Pawn pawn = assignments.FirstAssignedPawn("VPWE_Bonder");
+            Pawn pawn = assignments.FirstAssignedPawn("PB_Bonder");
             CompGraphicCustomization comp = personaWeapon.TryGetComp<CompGraphicCustomization>();
             if (comp != null)
             {

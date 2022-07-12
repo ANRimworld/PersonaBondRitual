@@ -13,8 +13,8 @@ namespace PersonaBond
 	{
 		public override ThinkNode DeepCopy(bool resolve = true)
 		{
-			JobGiver_TakeWeaponToCell VPWE_TakeWeaponToCell = (JobGiver_TakeWeaponToCell)base.DeepCopy(resolve);	
-			return VPWE_TakeWeaponToCell;
+			JobGiver_TakeWeaponToCell JobGiver_TakeWeaponToCell = (JobGiver_TakeWeaponToCell)base.DeepCopy(resolve);	
+			return JobGiver_TakeWeaponToCell;
 		}
 
 		protected override Job TryGiveJob(Pawn pawn)

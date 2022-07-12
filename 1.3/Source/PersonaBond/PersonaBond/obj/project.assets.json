@@ -517,11 +517,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Rimworld_Debug\\RimWorld\\Mods\\PersonaBondRitual\\1.3\\Source\\PersonaBond\\AlphaMemes\\PersonaBond.csproj",
-      "projectName": "AlphaMemes",
-      "projectPath": "C:\\Rimworld_Debug\\RimWorld\\Mods\\PersonaBondRitual\\1.3\\Source\\PersonaBond\\AlphaMemes\\PersonaBond.csproj",
+      "projectUniqueName": "C:\\Rimworld_Debug\\RimWorld\\Mods\\PersonaBondRitual\\1.3\\Source\\PersonaBond\\PersonaBond\\PersonaBond.csproj",
+      "projectName": "PersonaBond",
+      "projectPath": "C:\\Rimworld_Debug\\RimWorld\\Mods\\PersonaBondRitual\\1.3\\Source\\PersonaBond\\PersonaBond\\PersonaBond.csproj",
       "packagesPath": "C:\\Users\\Allie\\.nuget\\packages\\",
-      "outputPath": "C:\\Rimworld_Debug\\RimWorld\\Mods\\PersonaBondRitual\\1.3\\Source\\PersonaBond\\AlphaMemes\\obj\\",
+      "outputPath": "C:\\Rimworld_Debug\\RimWorld\\Mods\\PersonaBondRitual\\1.3\\Source\\PersonaBond\\PersonaBond\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

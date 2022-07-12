@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <JobDef>
-    <defName>VPWE_TakeWeaponToCell</defName>
-    <driverClass>AlphaMemes.JobDriver_TakeWeaponToCell</driverClass>
+    <defName>PB_TakeWeaponToCell</defName>
+    <driverClass>PersonaBond.JobDriver_TakeWeaponToCell</driverClass>
     <reportString>delivering TargetA.</reportString>
     <casualInterruptible>false</casualInterruptible>
   </JobDef>
     <JobDef>
-    <defName>VPWE_Bonding</defName>
-    <driverClass>AlphaMemes.JobDriver_Bonding</driverClass>
+    <defName>PB_Bonding</defName>
+    <driverClass>PersonaBond.JobDriver_Bonding</driverClass>
 	<alwaysShowWeapon>true</alwaysShowWeapon>
     <reportString>bonding TargetA.</reportString>
     <casualInterruptible>false</casualInterruptible>
   </JobDef>
    <JobDef>
-    <defName>VPWE_BondingCustomize</defName>
-    <driverClass>AlphaMemes.JobDriver_BondCustomize</driverClass>
+    <defName>PB_BondingCustomize</defName>
+    <driverClass>PersonaBond.JobDriver_BondCustomize</driverClass>
     <reportString>customizing TargetA.</reportString>
     <casualInterruptible>false</casualInterruptible>
   </JobDef>

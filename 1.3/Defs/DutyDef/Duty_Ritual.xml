@@ -2,13 +2,13 @@
 <Defs>
   <!--Duty Defs-->
    <DutyDef>
-    <defName>VPWE_TakeWeaponToCell</defName>
+    <defName>PB_TakeWeaponToCell</defName>
     <hook>HighPriority</hook>
     <socialModeMax>Off</socialModeMax>
     <thinkNode Class="ThinkNode_Priority">
       <subNodes>
         <!-- Goto pawn -->
-        <li Class="AlphaMemes.JobGiver_TakeWeaponToCell">
+        <li Class="PersonaBond.JobGiver_TakeWeaponToCell">
           <exactCell>true</exactCell>
           <locomotionUrgency>Jog</locomotionUrgency>
         </li>
@@ -16,25 +16,25 @@
     </thinkNode>
   </DutyDef>
    <DutyDef>
-    <defName>VPWE_BondCustomize</defName>
+    <defName>PB_BondCustomize</defName>
     <hook>HighPriority</hook>
     <socialModeMax>Off</socialModeMax>
     <thinkNode Class="ThinkNode_Priority">
       <subNodes>
         <!-- Goto pawn -->
-        <li Class="AlphaMemes.JobGiver_BondCustomize">
+        <li Class="PersonaBond.JobGiver_BondCustomize">
         </li>
       </subNodes>
     </thinkNode>
   </DutyDef>
    <DutyDef>
-    <defName>VPWE_Bonding</defName>
+    <defName>PB_Bonding</defName>
     <hook>HighPriority</hook>
     <socialModeMax>Off</socialModeMax>
     <thinkNode Class="ThinkNode_Priority">
       <subNodes>
         <!-- Goto pawn -->
-        <li Class="AlphaMemes.JobGiver_Bonding">
+        <li Class="PersonaBond.JobGiver_Bonding">
         </li>
       </subNodes>
     </thinkNode>

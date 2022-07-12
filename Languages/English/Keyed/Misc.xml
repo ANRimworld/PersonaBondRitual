@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
-	<!-- Ideoligions -->
-	
-	<></>
 
+	
+	<PB_DiableWeaponTraits>Disable Ritual Weapon Traits</PB_DiableWeaponTraits>
+	<PB_DiableWeaponTraits_ToolTip>Disable's the amazing and terrible weapon traits from ritual outcome</PB_DiableWeaponTraits_ToolTip>
+	<PB_RandomBondChance>Make ritual bond strength random</PB_RandomBondChance>
+	<PB_RandomBondChance_ToolTip>Makes the bond chance no longer bound to the pawns traits or stats</PB_RandomBondChance_ToolTip>
+	<PB_AleadyBonded>Pawn already has bonded weapon</PB_AleadyBonded>
 </LanguageData>

@@ -22,7 +22,7 @@ namespace PersonaBond
 			{
 				if (!skipReason)
 				{
-					reason = "VPWE_AleadyBonded".Translate();
+					reason = "PB_AleadyBonded".Translate();
 				}
 				return false;
 			}	

@@ -3,11 +3,11 @@
 
 	
   <WeaponTraitDef>
-    <defName>VPWE_BadBond</defName>
+    <defName>PB_BadBond</defName>
     <label>Terrible bond</label>
     <description>This weapon has rejected its bonded partner. They work terribly together</description>
     <commonality>0.0000001</commonality> <!--It wont let it be 0 so astromically rare will hopefully solve it-->
-	<workerClass>AlphaMemes.WeaponTraitWorker_Bonds</workerClass>
+	<workerClass>PersonaBond.WeaponTraitWorker_Bonds</workerClass>
 	<equippedStatOffsets>
       <MeleeWeapon_DamageMultiplier>-0.15</MeleeWeapon_DamageMultiplier>
     </equippedStatOffsets>
@@ -17,9 +17,9 @@
     </exclusionTags>
   </WeaponTraitDef>
   <ThoughtDef>
-    <defName>VPWE_ThoughtWeaponsHate</defName>
+    <defName>PB_ThoughtWeaponsHate</defName>
 	<validWhileDespawned>true</validWhileDespawned>
-    <workerClass>AlphaMemes.ThoughtWorker_WeaponTraitBonded</workerClass>
+    <workerClass>PersonaBond.ThoughtWorker_WeaponTraitBonded</workerClass>
     <stages>
       <li>
         <label>{WEAPON}'s Hate</label>
@@ -29,11 +29,11 @@
     </stages>
   </ThoughtDef>
   <WeaponTraitDef>
-    <defName>VPWE_AmazingBond</defName>
+    <defName>PB_AmazingBond</defName>
     <label>True bond</label>
     <description>This weapon has formed a perfect bond. They move perfectly as one.</description>
     <commonality>0.0000001</commonality>
-	<workerClass>AlphaMemes.WeaponTraitWorker_Bonds</workerClass>
+	<workerClass>PersonaBond.WeaponTraitWorker_Bonds</workerClass>
 	<equippedStatOffsets>
       <MeleeWeapon_DamageMultiplier>0.15</MeleeWeapon_DamageMultiplier>
 	  <MeleeHitChance>0.10</MeleeHitChance>
@@ -44,9 +44,9 @@
     </exclusionTags>
   </WeaponTraitDef>
   <ThoughtDef>
-    <defName>VPWE_ThoughtWeaponTrueBond</defName>
+    <defName>PB_ThoughtWeaponTrueBond</defName>
 	<validWhileDespawned>true</validWhileDespawned>
-    <workerClass>AlphaMemes.ThoughtWorker_WeaponTraitBonded</workerClass>
+    <workerClass>PersonaBond.ThoughtWorker_WeaponTraitBonded</workerClass>
     <stages>
       <li>
         <label>{WEAPON}'s true bond</label>
