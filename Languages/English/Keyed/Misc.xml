@@ -7,4 +7,5 @@
 	<PB_RandomBondChance>Make ritual bond strength random</PB_RandomBondChance>
 	<PB_RandomBondChance_ToolTip>Makes the bond chance no longer bound to the pawns traits or stats</PB_RandomBondChance_ToolTip>
 	<PB_AleadyBonded>Pawn already has bonded weapon</PB_AleadyBonded>
+	<PB_SelectPersonaWeapon>Select Weapon to Bond With</PB_SelectPersonaWeapon>
 </LanguageData>

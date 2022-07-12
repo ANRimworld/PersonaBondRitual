@@ -19,7 +19,7 @@ namespace PersonaBond
         public override string SettingsCategory()
         {
 
-            return "Persona Bond";
+            return "Persona Bond Ritual";
 
 
         }

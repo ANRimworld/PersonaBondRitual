@@ -3,7 +3,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/WeaponTraitDef[defName="PsychicSensitivityUpMajor"]</xpath>
 		<value>
-		<li Class="AlphaMemes.PersonaRitualComp_Extension">
+		<li Class="PersonaBond.PersonaRitualComp_Extension">
 			<weaponTrait>PsychicSensitivityUpMajor</weaponTrait>
 			<stat>PsychicSensitivity</stat>
 			<statCurve>
@@ -20,7 +20,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/WeaponTraitDef[defName="PsychicSensitivityUpMinor"]</xpath>
 		<value>
-		<li Class="AlphaMemes.PersonaRitualComp_Extension">
+		<li Class="PersonaBond.PersonaRitualComp_Extension">
 			<weaponTrait>PsychicSensitivityUpMinor</weaponTrait>
 			<stat>PsychicSensitivity</stat>
 			<statCurve>
@@ -37,7 +37,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/WeaponTraitDef[defName="PsychicSensitivityDownMinor"]</xpath>
 		<value>
-		<li Class="AlphaMemes.PersonaRitualComp_Extension">
+		<li Class="PersonaBond.PersonaRitualComp_Extension">
 			<weaponTrait>PsychicSensitivityDownMinor</weaponTrait>
 			<stat>PsychicSensitivity</stat>
 			<statCurve>
@@ -54,7 +54,7 @@
 		<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/WeaponTraitDef[defName="PsychicSensitivityDownMajor"]</xpath>
 		<value>
-		<li Class="AlphaMemes.PersonaRitualComp_Extension">
+		<li Class="PersonaBond.PersonaRitualComp_Extension">
 			<weaponTrait>PsychicSensitivityDownMajor</weaponTrait>
 			<stat>PsychicSensitivity</stat>
 			<statCurve>
@@ -71,7 +71,7 @@
 		<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/WeaponTraitDef[defName="ThoughtKind"]</xpath>
 		<value>
-		<li Class="AlphaMemes.PersonaRitualComp_Extension">
+		<li Class="PersonaBond.PersonaRitualComp_Extension">
 			<weaponTrait>ThoughtKind</weaponTrait>
 			<stat>SocialImpact</stat>
 			<statCurve>
@@ -100,7 +100,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/WeaponTraitDef[defName="ThoughtCalm"]</xpath>
 		<value>
-		<li Class="AlphaMemes.PersonaRitualComp_Extension">
+		<li Class="PersonaBond.PersonaRitualComp_Extension">
 			<weaponTrait>ThoughtCalm</weaponTrait>
 			<stat>MentalBreakThreshold</stat>
 			<statCurve>
@@ -129,7 +129,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/WeaponTraitDef[defName="ThoughtMuttering"]</xpath>
 		<value>
-		<li Class="AlphaMemes.PersonaRitualComp_Extension">
+		<li Class="PersonaBond.PersonaRitualComp_Extension">
 			<weaponTrait>ThoughtMuttering</weaponTrait>
 			<stat>MentalBreakThreshold</stat>
 			<statCurve>
@@ -158,7 +158,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/WeaponTraitDef[defName="ThoughtWailing"]</xpath>
 		<value>
-		<li Class="AlphaMemes.PersonaRitualComp_Extension">
+		<li Class="PersonaBond.PersonaRitualComp_Extension">
 			<weaponTrait>ThoughtWailing</weaponTrait>
 			<stat>MentalBreakThreshold</stat>
 			<statCurve>
@@ -191,7 +191,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/WeaponTraitDef[defName="OnKill_PsyfocusGain"]</xpath>
 		<value>
-		<li Class="AlphaMemes.PersonaRitualComp_Extension">
+		<li Class="PersonaBond.PersonaRitualComp_Extension">
 			<weaponTrait>OnKill_PsyfocusGain</weaponTrait>
 			<stat>PsychicSensitivity</stat>
 			<statCurve>
@@ -221,7 +221,7 @@
 		<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/WeaponTraitDef[defName="OnKill_ThoughtGood"]</xpath>
 		<value>
-		<li Class="AlphaMemes.PersonaRitualComp_Extension">
+		<li Class="PersonaBond.PersonaRitualComp_Extension">
 			<weaponTrait>OnKill_ThoughtGood</weaponTrait>
 			<stat>MeleeHitChance</stat> <!--Willing to bet combat extended screws this up somehow-->
 			<statCurve>
@@ -255,7 +255,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/WeaponTraitDef[defName="OnKill_ThoughtBad"]</xpath>
 		<value>
-		<li Class="AlphaMemes.PersonaRitualComp_Extension">
+		<li Class="PersonaBond.PersonaRitualComp_Extension">
 			<weaponTrait>OnKill_ThoughtBad</weaponTrait>
 			<stat>MeleeHitChance</stat> <!--Willing to bet combat extended screws this up somehow-->
 			<statCurve>
@@ -285,7 +285,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/WeaponTraitDef[defName="NeedKill"]</xpath>
 		<value>
-		<li Class="AlphaMemes.PersonaRitualComp_Extension">
+		<li Class="PersonaBond.PersonaRitualComp_Extension">
 			<weaponTrait>NeedKill</weaponTrait>
 			<stat>MeleeHitChance</stat> <!--Willing to bet combat extended screws this up somehow-->
 			<statCurve>
@@ -319,7 +319,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/WeaponTraitDef[defName="PsyfocusMeditationBonus"]</xpath>
 		<value>
-		<li Class="AlphaMemes.PersonaRitualComp_Extension">
+		<li Class="PersonaBond.PersonaRitualComp_Extension">
 			<weaponTrait>PsyfocusMeditationBonus</weaponTrait>
 			<stat>PsychicSensitivity</stat>
 			<statCurve>
@@ -345,7 +345,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/WeaponTraitDef[defName="NoPain"]</xpath>
 		<value>
-		<li Class="AlphaMemes.PersonaRitualComp_Extension">
+		<li Class="PersonaBond.PersonaRitualComp_Extension">
 			<weaponTrait>NoPain</weaponTrait>
 			<stat>PainShockThreshold</stat>
 			<statCurve>
@@ -379,7 +379,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/WeaponTraitDef[defName="SpeedBoost"]</xpath>
 		<value>
-		<li Class="AlphaMemes.PersonaRitualComp_Extension">
+		<li Class="PersonaBond.PersonaRitualComp_Extension">
 			<weaponTrait>SpeedBoost</weaponTrait>
 			<stat>MoveSpeed</stat>
 			<statCurve>
@@ -409,7 +409,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/WeaponTraitDef[defName="HungerMaker"]</xpath>
 		<value>
-		<li Class="AlphaMemes.PersonaRitualComp_Extension">
+		<li Class="PersonaBond.PersonaRitualComp_Extension">
 			<weaponTrait>HungerMaker</weaponTrait>
 			<stat>HungerRateMultiplier</stat>
 			<statCurve>
@@ -439,7 +439,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/WeaponTraitDef[defName="NeuralHeatRecoveryGain"]</xpath>
 		<value>
-		<li Class="AlphaMemes.PersonaRitualComp_Extension">
+		<li Class="PersonaBond.PersonaRitualComp_Extension">
 			<weaponTrait>NeuralHeatRecoveryGain</weaponTrait>
 			<stat>PsychicEntropyRecoveryRate</stat>
 			<statCurve>
@@ -469,7 +469,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/WeaponTraitDef[defName="Jealous"]</xpath>
 		<value>
-		<li Class="AlphaMemes.PersonaRitualComp_Extension">
+		<li Class="PersonaBond.PersonaRitualComp_Extension">
 			<weaponTrait>Jealous</weaponTrait>
 			<traitDefStage>
 				<li>

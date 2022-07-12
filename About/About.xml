@@ -34,7 +34,7 @@
 			<downloadUrl></downloadUrl>
 		</li>
 	</modDependencies>
-	<packageId>Allie.PersonaBond</packageId>
+	<packageId>Allie.PersonaBondRitual</packageId>
 	<loadAfter>
 		<li>VanillaExpanded.VPersonaWeaponsE</li>
 	</loadAfter>

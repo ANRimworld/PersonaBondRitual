@@ -32,7 +32,7 @@ namespace PersonaBond
 				return null;
 			}
 			IntVec3 cell = pawn.mindState.duty.focusThird.Thing.InteractionCell;
-			//cell += new IntVec3(0, 0, -1);
+			cell += new IntVec3(0, 0, -1);
 			if (!pawn.CanReach(cell, PathEndMode.Touch, PawnUtility.ResolveMaxDanger(pawn, this.maxDanger)))
 			{
 				cell = pawn.mindState.duty.focusThird.Thing.InteractionCell;
