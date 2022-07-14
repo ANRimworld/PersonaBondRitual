@@ -101,7 +101,10 @@ namespace PersonaBond
         //string concat, OutcomeChance outcome,  Precept_Ritual ritual, float Quality
         public static string GetOutcomeChanceOverride(string concat, OutcomeChance outcome,Precept_Ritual ritual, float quality)
         {
-
+            if(ritual == null)
+            {
+                return concat;
+            }
             if (ritual.outcomeEffect is RitualOutcomeEffectWorker_Persona worker)
             {
                 return worker.DialogOutcomeLabelOverride(outcome, quality);

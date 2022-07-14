@@ -36,7 +36,7 @@ namespace PersonaBond
             flag = false;
             foreach(ThingDef def in behavior.AllPersonaWeapons)
             {
-                if (target.Map.listerThings.ThingsOfDef(def).Any())
+                if (target.Map.listerThings.ThingsOfDef(def).Any(x => x.IsInAnyStorage()))//Had to make it worse by checking in storage because a persona weapon was in an acient danger on one test lol
                 {
                     flag = true;
                     break;

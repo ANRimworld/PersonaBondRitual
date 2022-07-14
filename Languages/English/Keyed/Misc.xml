@@ -8,4 +8,9 @@
 	<PB_RandomBondChance_ToolTip>Makes the bond chance no longer bound to the pawns traits or stats</PB_RandomBondChance_ToolTip>
 	<PB_AleadyBonded>Pawn already has bonded weapon</PB_AleadyBonded>
 	<PB_SelectPersonaWeapon>Select Weapon to Bond With</PB_SelectPersonaWeapon>
+	<PB_CapableOfViolence>Must be capable of violence</PB_CapableOfViolence>
+	<PB_UnableToEquip>Could not equip weapon, can not continue</PB_UnableToEquip>
+	<PB_CompQualityDesc>{0}: {1} quality based on:</PB_CompQualityDesc>
+	<PB_RitualWorst>{RITUAL} went terrible, {PAWN} was not compatible with {WEAPON}. Their aversion affects their performance.</PB_RitualWorst>
+	<PB_RitualBest>{RITUAL} went perfectly, {PAWN} and {WEAPON} are like one. Their link improves their effectiveness.</PB_RitualBest>
 </LanguageData>

@@ -28,7 +28,7 @@ namespace PersonaBond
 		{
 			//Copied tick action from JobDriver_GiveSpeech
 			this.FailOnDestroyedOrNull(TargetIndex.A);			
-			Toil toilGoto = Toils_Goto.GotoCell(TargetIndex.A, PathEndMode.Touch).FailOnSomeonePhysicallyInteracting(TargetIndex.A);
+			Toil toilGoto = Toils_Goto.GotoCell(TargetIndex.C, PathEndMode.OnCell).FailOnSomeonePhysicallyInteracting(TargetIndex.A);
 			yield return toilGoto;
 			Toil toil = new Toil();
 			toil.tickAction = delegate ()
@@ -55,7 +55,7 @@ namespace PersonaBond
 					}
 					this.ticksTillSocialInteraction = SocialInteractionInterval;
 				}
-				IntVec3 face = lordJob_Ritual.CurrentSpectatorCrowdCenter();
+				IntVec3 face = Takee.Position;
 				pawn.rotationTracker.FaceTarget(face);
 
 				this.ticksTillSocialInteraction--;

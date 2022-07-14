@@ -110,22 +110,22 @@
     <outcomeChances>
       <li>
         <label>Terrible</label>
-        <chance>0.25</chance>
-        <memory>TerribleFestival</memory>
+        <chance>0.20</chance>
+        <memory>PB_TerribleBond</memory>
         <description>The {0} was terrible. We could all feel the sting of rejection</description>
         <positivityIndex>-1</positivityIndex>
       </li>
       <li>
         <label>Normal</label>
-        <chance>0.5</chance>
-        <memory>FunFestival</memory>
+        <chance>0.55</chance>
+        <memory>PB_NormalBond</memory>
         <description>The {0} was good. They will get along fairly well.</description>
         <positivityIndex>1</positivityIndex>
       </li>
       <li>
         <label>Amazing</label>
         <chance>0.25</chance>
-        <memory>UnforgettableFestival</memory>
+        <memory>PB_AmazingBond</memory>
         <description>The {0} was electrifying. Those two are truly made for eachother.</description>
         <positivityIndex>2</positivityIndex>
       </li>

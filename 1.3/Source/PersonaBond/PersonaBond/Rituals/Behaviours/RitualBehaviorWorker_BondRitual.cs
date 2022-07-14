@@ -23,17 +23,25 @@ namespace PersonaBond
         public override void TryExecuteOn(TargetInfo target, Pawn organizer, Precept_Ritual ritual, RitualObligation obligation, RitualRoleAssignments assignments, bool playerForced = false)
         {
             Pawn pawn = assignments.FirstAssignedPawn("PB_Bonder");
+            if (!EquipmentUtility.CanEquip(personaWeapon, pawn))
+            {
+                Messages.Message("PB_UnableToEquip", MessageTypeDefOf.RejectInput);
+                return;
+            }
             CompGraphicCustomization comp = personaWeapon.TryGetComp<CompGraphicCustomization>();
             if (comp != null)
             {
                 Action onClose = () =>
                 {                   
                     if (pawn.jobs.curJob.def != GraphicCustomization_DefOf.VEF_CustomizeItem)//How I can tell it was confirmed
-                    {
-                        
+                    {                       
                         return;
                     }
                     TryExecuteInternal(target, organizer, ritual, obligation, assignments, playerForced);
+
+                    RitualOutcomeComp_BondTraits outcomeComp = ritual.outcomeEffect.GetComp<RitualOutcomeComp_BondTraits>();//Yes I made an extension method for this
+                    storedQuality = outcomeComp.CountInternal(pawn, ritual, out string qualityDesc, ritual.outcomeEffect.DataForComp(outcomeComp) as RitualOutcomeComp_BondTraitsData);
+                    storedQualDesc = qualityDesc;
                 };
                 
                 var window = new Dialog_GraphicCustomization_BondRitual(comp, onClose,pawn);
@@ -77,7 +85,9 @@ namespace PersonaBond
         public override bool CanExecuteOn(TargetInfo target, RitualObligation obligation)
         {
             return base.CanExecuteOn(target, obligation);
+           
         }
+        
         public override void ExposeData()
         {
             base.ExposeData();
@@ -87,6 +97,7 @@ namespace PersonaBond
         {
             base.Cleanup(ritual);
             personaWeapon = null;
+            storedQuality = 0f;
         }
         public IEnumerable<ThingDef> AllPersonaWeapons
         {
@@ -103,7 +114,8 @@ namespace PersonaBond
             }
         }
         public Thing personaWeapon;
-
+        public float storedQuality; //I have to store it because the pawn bonds mid ritual, so if the trait affects stats it would change quality from start to finish
+        public string storedQualDesc;
         
     }
 }

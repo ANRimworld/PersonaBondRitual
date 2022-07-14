@@ -19,7 +19,7 @@ namespace PersonaBond
 			var behavior = ritual.Ritual.behavior as RitualBehaviorWorker_BondRitual;
 			Thing weapon = behavior.personaWeapon;
 
-			IntVec3 cell = weapon.Position;
+			IntVec3 cell = pawn.mindState.duty.focusThird.Thing.Position;
 
 			
 			Job job = JobMaker.MakeJob(InternalDefOf.PB_BondingCustomize, weapon, cell, pawn.mindState.duty.focusThird);

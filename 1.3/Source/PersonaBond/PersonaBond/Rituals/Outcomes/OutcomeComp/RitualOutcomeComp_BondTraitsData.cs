@@ -13,7 +13,7 @@ namespace PersonaBond
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Deep.Look(ref randomForWeapon,"randomForWeapon",Array.Empty<object>());
+            Scribe_Collections.Look(ref randomForWeapon,"randomForWeapon",LookMode.Deep,Array.Empty<object>());
         }
         public List<RitualOutcomeComp_RandomForWeapon> randomForWeapon = new List<RitualOutcomeComp_RandomForWeapon>();
 

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Verse;
+using Verse.AI;
 using VanillaPersonaWeaponsExpanded;
 using GraphicCustomization;
 using Verse.Steam;
@@ -19,7 +20,7 @@ namespace PersonaBond
     //This patch adds stuff selection
     public static class Dialog_BeginRitual_DoWindowContents_Patch_Persona
     {
-        public static void Postfix(Dialog_BeginRitual __instance, Rect inRect, Precept_Ritual ___ritual)
+        public static void Postfix(Dialog_BeginRitual __instance, Rect inRect, Precept_Ritual ___ritual,RitualRoleAssignments ___assignments)
         {
 
             Precept_Ritual ritual = ___ritual;
@@ -38,10 +39,25 @@ namespace PersonaBond
             DrawButton(selectWeapon, behavior.personaWeapon?.TryGetComp<CompGeneratedNames>().Name ?? "Select Weapon", delegate
             {
                 var floatOptions = new List<FloatMenuOption>();
+                Pawn pawn = null;
                 List<ThingDef> thingDefs = behavior.AllPersonaWeapons.ToList();
-                for(int i = 0; i < thingDefs.Count; i++)
+                if (___assignments.AnyPawnAssigned("PB_Bonder"))
                 {
-                    List<Thing> temp = Find.CurrentMap.listerThings.ThingsOfDef(thingDefs[i]);
+                    pawn = ___assignments.FirstAssignedPawn("PB_Bonder");
+                }
+                for (int i = 0; i < thingDefs.Count; i++)
+                {
+                    List<Thing> temp = Find.CurrentMap.listerThings.ThingsOfDef(thingDefs[i]).ToList();
+                    if (pawn != null)
+                    {
+                        foreach (Thing thing in temp)
+                        {
+                            if (!EquipmentUtility.CanEquip(thing, pawn) || !pawn.CanReserveAndReach(thing,PathEndMode.Touch,Danger.Deadly,ignoreOtherReservations: true))
+                            {
+                                temp.Remove(thing);
+                            }
+                        }
+                    }
                     weapons.AddRange(temp);
                 }
                 foreach (Thing thing in weapons)

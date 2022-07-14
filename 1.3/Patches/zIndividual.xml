@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[SYR] Individuality</li> <!-- Checks for this mod, if not active there is no reason to add values -->
+    </mods>
+    <match Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/WeaponTraitDef[defName = "ThoughtKind"]/modExtensions/li/traitDefStage</xpath>
+				<value>
+					<li>
+						<key>SYR_AnimalAffinity</key>
+						<value>0</value>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/WeaponTraitDef[defName = "ThoughtMuttering"]/modExtensions/li/traitDefStage</xpath>
+				<value>
+					<li>
+						<key>SYR_Perfectionist</key>
+						<value>0</value>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/WeaponTraitDef[defName = "OnKill_PsyfocusGain"]/modExtensions/li/traitDefStage</xpath>
+				<value>
+					<li>
+						<key>SYR_Agile</key>
+						<value>0</value>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/WeaponTraitDef[defName = "OnKill_ThoughtGood"]/modExtensions/li/traitDefStage</xpath>
+				<value>
+					<li>
+						<key>SYR_Agile</key>
+						<value>0</value>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/WeaponTraitDef[defName = "NeedKill"]/modExtensions/li/traitDefStage</xpath>
+				<value>
+					<li>
+						<key>SYR_HandEyeCoordination</key>
+						<value>0</value>
+					</li>
+				</value>				
+			</li>
+
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/WeaponTraitDef[defName = "SpeedBoost"]/modExtensions/li/traitDefStage</xpath>
+				<value>
+					<li>
+						<key>SYR_Agile</key>
+						<value>0</value>
+					</li>
+				</value>				
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/WeaponTraitDef[defName = "HungerMaker"]/modExtensions/li/traitDefStage</xpath>
+				<value>
+					<li>
+						<key>SYR_GreenThumb</key>
+						<value>0</value>
+					</li>
+				</value>				
+			</li>
+
+		</operations>
+	</match>
+</Operation>
+</Patch>
+

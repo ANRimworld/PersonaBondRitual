@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DefOfs\InternalDefOf.cs" />
+    <Compile Include="Extensions\OutcomeExtensionMethod.cs" />
     <Compile Include="Harmony\HarmonyInstance.cs" />
     <Compile Include="Options\PersonaBond_Settings.cs" />
     <Compile Include="Options\PersonaBond_SettingsController.cs" />

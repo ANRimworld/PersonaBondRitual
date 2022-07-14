@@ -37,7 +37,7 @@ namespace PersonaBond
                 {
                     bladeComp.TraitsListForReading.Add(InternalDefOf.PB_BadBond);
                 }
-                extraOutcomeDesc = "PB_RitualWorst".Translate(jobRitual.Ritual.Label.Named("RITUAL"), pawn.Name.Named("PAWN"));
+                extraOutcomeDesc = "PB_RitualWorst".Translate(jobRitual.Ritual.Label.Named("RITUAL"), pawn.Name.Named("PAWN"), weapon.TryGetComp<CompGeneratedNames>().Name.Named("WEAPON"));
             }
             if (outcome.BestPositiveOutcome(jobRitual))
             {
@@ -45,10 +45,8 @@ namespace PersonaBond
                 {
                     bladeComp.TraitsListForReading.Add(InternalDefOf.PB_AmazingBond);
                 }
-                extraOutcomeDesc = "PB_RitualBest".Translate(jobRitual.Ritual.Label.Named("RITUAL"), pawn.Name.Named("PAWN"));
-            }      
-
-
+                extraOutcomeDesc = "PB_RitualBest".Translate(jobRitual.Ritual.Label.Named("RITUAL"), pawn.Name.Named("PAWN"), weapon.TryGetComp<CompGeneratedNames>().Name.Named("WEAPON"));
+            }    
         }
         public override void Apply(float progress, Dictionary<Pawn, int> totalPresence, LordJob_Ritual jobRitual)
         {
@@ -163,29 +161,12 @@ namespace PersonaBond
                     {
                         return false;
                     }
+
                 }
             }
             return true;
         }
-        //Outcome worker doesnt have this and it was annoying me needing for loops always
-        public T GetComp<T>() where T : RitualOutcomeComp
-        {
-            if (def.comps != null)
-            {
-                int index = 0;
-                int count = def.comps.Count;
-                while (index < count)
-                {
-                    T comp = def.comps[index] as T;
-                    if (comp != null)
-                    {
-                        return comp;
-                    }
-                    index++;
-                }
-            }
-            return default(T);
-        }
+
 
 
         

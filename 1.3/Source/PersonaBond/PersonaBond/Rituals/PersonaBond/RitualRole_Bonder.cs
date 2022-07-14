@@ -26,7 +26,14 @@ namespace PersonaBond
 				}
 				return false;
 			}	
-
+			if (p.WorkTagIsDisabled(WorkTags.Violent))
+			{
+				if (!skipReason)
+				{
+					reason = "PB_CapableOfViolence".Translate();
+				}
+				return false;
+			}
 			return true;
 		}
 
