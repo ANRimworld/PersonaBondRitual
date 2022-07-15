@@ -92,6 +92,8 @@ namespace PersonaBond
         {
             base.ExposeData();
             Scribe_References.Look(ref personaWeapon, "personaWeapon");
+            Scribe_Values.Look(ref storedQualDesc, "storedQualDesc");
+            Scribe_Values.Look(ref storedQuality, "storedQuality");
         }
         public override void Cleanup(LordJob_Ritual ritual)
         {
