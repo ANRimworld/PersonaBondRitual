@@ -38,5 +38,6 @@
 	<loadAfter>
 		<li>VanillaExpanded.VPersonaWeaponsE</li>
 	</loadAfter>
-	<description>Adds a new ritual for finding the perfect match of weapon and fighter!</description>
+	<description>Adds a new Ritual to create an intimate bond between pawn and weapon. You can play matchmaker in finding the right pawn to match the weapon’s personality.
+	</description>
 </ModMetaData>
