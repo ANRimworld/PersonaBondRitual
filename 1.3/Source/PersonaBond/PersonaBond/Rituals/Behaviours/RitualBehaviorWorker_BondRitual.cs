@@ -48,6 +48,10 @@ namespace PersonaBond
                 Find.WindowStack.Add(window);
 
             }
+            else
+            {
+                TryExecuteInternal(target,organizer,ritual,obligation,assignments,playerForced);
+            }
 
            
         }
@@ -107,8 +111,7 @@ namespace PersonaBond
             {
                 foreach (var def in DefDatabase<ThingDef>.AllDefs)
                 {
-                    if (def.GetCompProperties<CompProperties_GraphicCustomization>() != null
-                        && def.GetCompProperties<CompProperties_BladelinkWeapon>() != null)
+                    if (def.GetCompProperties<CompProperties_BladelinkWeapon>() != null)                        
                     {
                         yield return def;
                     }

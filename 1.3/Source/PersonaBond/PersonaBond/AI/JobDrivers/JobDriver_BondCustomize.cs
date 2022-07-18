@@ -78,7 +78,10 @@ namespace PersonaBond
 			yield return Toils_General.Do(() =>
 			{
 				var comp = TargetA.Thing.TryGetComp<CompGraphicCustomization>();
-				comp.Customize();
+				if(comp != null)
+                {
+					comp.Customize();
+				}				
 			});
 			yield break;
 		}
