@@ -96,5 +96,41 @@ namespace PersonaBond
             base.Notify_Unbonded(pawn);
         }
     }
-
+    public class StatPart_PersonaBond : StatPart
+    {
+        public override void TransformValue(StatRequest req, ref float val)
+        {
+            if (req.Thing?.def?.weaponTags?.Contains("Bladelink")?? false)
+            {
+                var comp = req.Thing.TryGetComp<CompBladelinkWeapon>();
+                foreach (WeaponTraitDef trait in comp.TraitsListForReading.ToList())
+                {
+                    if (trait == InternalDefOf.PB_AmazingBond || trait == InternalDefOf.PB_BadBond)
+                    {
+                        float multi = trait.equippedStatOffsets.FirstOrDefault(x => x.stat == StatDefOf.MeleeWeapon_DamageMultiplier)?.value ?? 1f;
+                        //Copying quality multiplier for this
+                        float num = val * multi - val;
+                        val += num;
+                    }
+                }
+            }
+        }
+        public override string ExplanationPart(StatRequest req)
+        {
+            if (req.Thing?.def?.weaponTags?.Contains("Bladelink") ?? false)
+            {
+                var comp = req.Thing.TryGetComp<CompBladelinkWeapon>();
+                foreach (WeaponTraitDef trait in comp.TraitsListForReading.ToList())
+                {
+                    if (trait == InternalDefOf.PB_AmazingBond || trait == InternalDefOf.PB_BadBond)
+                    {
+                        float multi = trait.equippedStatOffsets.FirstOrDefault(x => x.stat == StatDefOf.MeleeWeapon_DamageMultiplier)?.value ?? 1f;
+                        string str = "PersonaBond_StatOffsetDesc".Translate() + ": x" + multi.ToStringPercent();
+                        return str;
+                    }
+                }
+            }
+            return null;
+        }
+    }
 }

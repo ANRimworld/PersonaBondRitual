@@ -30,15 +30,21 @@ namespace PersonaBond
             {
                 return flag;
             }
-            flag = false;
             checkTime = Find.TickManager.TicksGame + 600; //Long time between checks
             var behavior = parent.behavior as RitualBehaviorWorker_BondRitual;
             flag = false;
             foreach(ThingDef def in behavior.AllPersonaWeapons)
             {
-                if (target.Map.listerThings.ThingsOfDef(def).Any(x => x.IsInAnyStorage()))//Had to make it worse by checking in storage because a persona weapon was in an acient danger on one test lol
+                foreach (var weapon in target.Map.listerThings.ThingsOfDef(def))
                 {
-                    flag = true;
+                    if (target.Map.reachability.CanReach(target.Cell, weapon, Verse.AI.PathEndMode.Touch, TraverseParms.For(TraverseMode.ByPawn)))
+                    {
+                        flag = true;
+                        break;
+                    }
+                }
+                if (flag)
+                {
                     break;
                 }
             }

@@ -9,7 +9,7 @@
     <commonality>0.0000001</commonality> <!--It wont let it be 0 so astromically rare will hopefully solve it-->
 	<workerClass>PersonaBond.WeaponTraitWorker_Bonds</workerClass>
 	<equippedStatOffsets>
-      <MeleeWeapon_DamageMultiplier>-0.15</MeleeWeapon_DamageMultiplier>
+      <MeleeWeapon_DamageMultiplier>0.85</MeleeWeapon_DamageMultiplier>
     </equippedStatOffsets>
     <marketValueOffset>0</marketValueOffset>
     <exclusionTags>
@@ -24,8 +24,11 @@
     <commonality>0.0000001</commonality>
 	<workerClass>PersonaBond.WeaponTraitWorker_Bonds</workerClass>
 	<equippedStatOffsets>
-      <MeleeWeapon_DamageMultiplier>0.15</MeleeWeapon_DamageMultiplier>
-	  <MeleeHitChance>0.10</MeleeHitChance>
+      <MeleeWeapon_DamageMultiplier>1.15</MeleeWeapon_DamageMultiplier>
+      <MeleeHitChanceOutdoorsDarkOffset>0.1</MeleeHitChanceOutdoorsDarkOffset>
+      <MeleeHitChanceOutdoorsLitOffset>0.1</MeleeHitChanceOutdoorsLitOffset>
+      <MeleeHitChanceIndoorsDarkOffset>0.1</MeleeHitChanceIndoorsDarkOffset>
+      <MeleeHitChanceIndoorsLitOffset>0.1</MeleeHitChanceIndoorsLitOffset>
     </equippedStatOffsets>
     <marketValueOffset>0</marketValueOffset>
     <exclusionTags>

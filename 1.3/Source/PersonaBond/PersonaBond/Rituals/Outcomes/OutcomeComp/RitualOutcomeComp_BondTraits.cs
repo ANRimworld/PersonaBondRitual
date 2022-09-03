@@ -42,11 +42,11 @@ namespace PersonaBond
             //Complicated way of deciding bond strength based on pawns traits and stats compared to the weapon trat def
             //Alternative is random
             qualityDesc = "";
-           
+
             float count = 0f;
             float max = 0f;
             var behavior = ritual.behavior as RitualBehaviorWorker_BondRitual;
-            if(behavior.personaWeapon == null)//can't calculate till selected
+            if (behavior.personaWeapon == null)//can't calculate till selected
             {
                 return 0f;
             }
@@ -58,7 +58,7 @@ namespace PersonaBond
             StringBuilder qualityDebug = new StringBuilder();
             CompBladelinkWeapon weapon = behavior.personaWeapon.TryGetComp<CompBladelinkWeapon>();
             List<WeaponTraitDef> wepTraits = weapon.TraitsListForReading;
-            foreach(WeaponTraitDef wepTrait in wepTraits) //Probably should separate these out to their own methods at some point
+            foreach (WeaponTraitDef wepTrait in wepTraits) //Probably should separate these out to their own methods at some point
             {
                 qualityDebug.AppendInNewLine("Weapon Trait: " + wepTrait.label);
                 if (wepTrait.HasModExtension<PersonaRitualComp_Extension>())
@@ -70,15 +70,15 @@ namespace PersonaBond
                     {
                         int traitCount = 0;
                         max += MaxValueOfCurve(extension.traitCurve);
-                        foreach (KeyValuePair<TraitDef,int> kvp in extension.traitDefStage)
-                        {                            
-                            if (pawn.story.traits.HasTrait(kvp.Key, kvp.Value))
+                        foreach (KeyValuePair<TraitDef, int> kvp in extension.traitDefStage)
+                        {
+                            if (pawn.story?.traits?.HasTrait(kvp.Key, kvp.Value) ?? false)
                             {
                                 string label = kvp.Key.DataAtDegree(kvp.Value).GetLabelFor(pawn);
                                 traitCount++;
                                 qualityDebug.AppendInNewLine(" Trait " + label);
                             }
-  
+
                         }
                         curveCount = traitCount;
                         locQuality = extension.traitCurve.Evaluate(curveCount);
@@ -93,27 +93,35 @@ namespace PersonaBond
                         locQuality = extension.statCurve.Evaluate(curveCount);
                         qualityDebug.AppendInNewLine(" Stat Quality: " + locQuality.ToStringPercent() + " Max Quality " + MaxValueOfCurve(extension.statCurve).ToStringPercent());
                         count += locQuality;
-                    }                    
+                    }
                 }
             }
             //Bonus for Pyro and FireSwords
-            if(behavior.personaWeapon.def.tools.Any(x=>x.extraMeleeDamages?.Any(y=>y.def == DamageDefOf.Flame)?? false)) 
+            try
             {
-                if (pawn.story.traits.HasTrait(TraitDefOf.Pyromaniac))
+                if (behavior.personaWeapon.def.tools?.Any(x => x.extraMeleeDamages?.Any(y => y.def == DamageDefOf.Flame) ?? false) ?? false)
                 {
-                    count += 0.2f;
-                    max += 0.2f;
-                    qualityDebug.AppendInNewLine("Pyromaniac with plasmasword " + 0.2f.ToStringPercent());
+                    if (pawn.story?.traits?.HasTrait(TraitDefOf.Pyromaniac) ?? false)
+                    {
+                        count += 0.2f;
+                        max += 0.2f;
+                        qualityDebug.AppendInNewLine("Pyromaniac with plasmasword " + 0.2f.ToStringPercent());
+                    }
                 }
             }
-            if(qualityDebug.Length > 0) 
+            catch
+            {
+                qualityDebug.AppendInNewLine("Error in Pyromaniac check");
+            }
+
+            if (qualityDebug.Length > 0)
             {
                 qualityDebug.AppendInNewLine("Quality: " + count.ToStringPercent() + "/" + max.ToStringPercent() + " Max quality");
                 qualityDesc = qualityDebug.ToString();
             }
             return count;
         }
-        
+
         public override float Count(LordJob_Ritual ritual, RitualOutcomeComp_Data data)
         {
             Pawn pawn = ritual.assignments.AssignedPawns("PB_Bonder").First();
