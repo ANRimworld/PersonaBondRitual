@@ -37,7 +37,7 @@ namespace PersonaBond
             {
                 foreach (var weapon in target.Map.listerThings.ThingsOfDef(def))
                 {
-                    if (target.Map.reachability.CanReach(target.Cell, weapon, Verse.AI.PathEndMode.Touch, TraverseParms.For(TraverseMode.ByPawn)))
+                    if (target.Map.reachability.CanReach(target.Cell, weapon, Verse.AI.PathEndMode.Touch, TraverseParms.For(TraverseMode.PassDoors)))
                     {
                         flag = true;
                         break;
