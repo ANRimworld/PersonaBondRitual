@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <JobDef>
+    <defName>PB_TakeWeaponToCell</defName>
+    <driverClass>PersonaBond.JobDriver_TakeWeaponToCell</driverClass>
+    <reportString>delivering TargetA.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+    <JobDef>
+    <defName>PB_Bonding</defName>
+    <driverClass>PersonaBond.JobDriver_Bonding</driverClass>
+	<alwaysShowWeapon>true</alwaysShowWeapon>
+    <reportString>bonding TargetA.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+   <JobDef>
+    <defName>PB_BondingCustomize</defName>
+    <driverClass>PersonaBond.JobDriver_BondCustomize</driverClass>
+    <reportString>customizing TargetA.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+
+
+</Defs>

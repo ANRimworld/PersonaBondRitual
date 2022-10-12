@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	
+  <WeaponTraitDef>
+    <defName>PB_BadBond</defName>
+    <label>Terrible bond</label>
+    <description>This weapon has rejected its bonded partner. They work terribly together</description>
+    <commonality>0.0000001</commonality> <!--It wont let it be 0 so astromically rare will hopefully solve it-->
+	<workerClass>PersonaBond.WeaponTraitWorker_Bonds</workerClass>
+	<equippedStatOffsets>
+      <MeleeWeapon_DamageMultiplier>0.85</MeleeWeapon_DamageMultiplier>
+    </equippedStatOffsets>
+    <marketValueOffset>0</marketValueOffset>
+    <exclusionTags>
+      <li>NeverBond</li>
+    </exclusionTags>
+  </WeaponTraitDef>
+
+  <WeaponTraitDef>
+    <defName>PB_AmazingBond</defName>
+    <label>True bond</label>
+    <description>This weapon has formed a perfect bond. They move perfectly as one.</description>
+    <commonality>0.0000001</commonality>
+	<workerClass>PersonaBond.WeaponTraitWorker_Bonds</workerClass>
+	<equippedStatOffsets>
+      <MeleeWeapon_DamageMultiplier>1.15</MeleeWeapon_DamageMultiplier>
+      <MeleeHitChanceOutdoorsDarkOffset>0.1</MeleeHitChanceOutdoorsDarkOffset>
+      <MeleeHitChanceOutdoorsLitOffset>0.1</MeleeHitChanceOutdoorsLitOffset>
+      <MeleeHitChanceIndoorsDarkOffset>0.1</MeleeHitChanceIndoorsDarkOffset>
+      <MeleeHitChanceIndoorsLitOffset>0.1</MeleeHitChanceIndoorsLitOffset>
+    </equippedStatOffsets>
+    <marketValueOffset>0</marketValueOffset>
+    <exclusionTags>
+      <li>NeverBond</li>
+    </exclusionTags>
+  </WeaponTraitDef>
+
+</Defs>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	
+  <ThoughtDef>
+    <defName>PB_ThoughtWeaponsHate</defName>
+	<validWhileDespawned>true</validWhileDespawned>
+    <workerClass>PersonaBond.ThoughtWorker_WeaponTraitBonded</workerClass>
+    <stages>
+      <li>
+        <label>{WEAPON}'s Hate</label>
+        <description>I talked to {WEAPON}; it hates me.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>PB_ThoughtWeaponTrueBond</defName>
+	<validWhileDespawned>true</validWhileDespawned>
+    <workerClass>PersonaBond.ThoughtWorker_WeaponTraitBonded</workerClass>
+    <stages>
+      <li>
+        <label>{WEAPON}'s true bond</label>
+        <description>My bonded weapon {WEAPON} is the perfect match, we are one.</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

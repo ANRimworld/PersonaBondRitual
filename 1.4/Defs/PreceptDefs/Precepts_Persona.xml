@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+		<!--Precepts-->
+
+		<PreceptDef>
+		<defName>PB_BondRitual</defName>
+		<label>persona bond</label>
+		<description>A gathering to witness a new bond with a persona weapons</description>
+		<issue>Ritual</issue>		
+		<iconPath>Designations/Slaughter</iconPath>
+		<preceptClass>Precept_Ritual</preceptClass>
+		<ritualPatternBase>PB_BondRitual_Pattern</ritualPatternBase>
+		<allowDuplicates>false</allowDuplicates>
+		<ignoreNameUniqueness>true</ignoreNameUniqueness>
+		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+		<visible>false</visible>
+		<selectionWeight>1.0</selectionWeight>
+		<useRepeatPenalty>false</useRepeatPenalty>
+		<receivesExpectationsQualityOffset>false</receivesExpectationsQualityOffset>
+		<skipOpportunityLettersBeforeDay>0</skipOpportunityLettersBeforeDay>
+	</PreceptDef>
+	
+
+</Defs>

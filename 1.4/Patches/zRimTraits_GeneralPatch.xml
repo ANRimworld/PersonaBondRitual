@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>RimTraits - General Traits</li> <!-- Checks for this mod, if not active there is no reason to add values -->
+    </mods>
+    <match Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/WeaponTraitDef[defName = "ThoughtKind"]/modExtensions/li/traitDefStage</xpath>
+				<value>
+					<li>
+						<key>RT_Composed</key>
+						<value>0</value>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/WeaponTraitDef[defName = "ThoughtCalm"]/modExtensions/li/traitDefStage</xpath>
+				<value>
+					<li>
+						<key>RT_Valiant</key>
+						<value>0</value>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/WeaponTraitDef[defName = "OnKill_ThoughtBad"]/modExtensions/li/traitDefStage</xpath>
+				<value>
+					<li>
+						<key>RT_Craven</key>
+						<value>0</value>
+					</li>
+					<li>
+						<key>RT_Clumsy</key>
+						<value>0</value>
+					</li>
+					<li>
+						<key>RT_Farsighted</key>
+						<value>0</value>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/WeaponTraitDef[defName = "ThoughtMuttering"]/modExtensions/li/traitDefStage</xpath>
+				<value>
+					<li>
+						<key>RT_Ignorant</key>
+						<value>0</value>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/WeaponTraitDef[defName = "ThoughtWailing"]/modExtensions/li/traitDefStage</xpath>
+				<value>
+					<li>
+						<key>RT_Ignorant</key>
+						<value>0</value>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/WeaponTraitDef[defName = "OnKill_ThoughtGood"]/modExtensions/li/traitDefStage</xpath>
+				<value>
+					<li>
+						<key>RT_Nearsighted</key>
+						<value>0</value>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/WeaponTraitDef[defName = "NeedKill"]/modExtensions/li/traitDefStage</xpath>
+				<value>
+					<li>
+						<key>RT_Coordinated</key>
+						<value>0</value>
+					</li>
+				</value>				
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/WeaponTraitDef[defName = "NoPain"]/modExtensions/li/traitDefStage</xpath>
+				<value>
+					<li>
+						<key>RT_Resilient</key>
+						<value>0</value>
+					</li>
+					<li>
+						<key>RT_Hardy</key>
+						<value>0</value>
+					</li>
+				</value>				
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/WeaponTraitDef[defName = "SpeedBoost"]/modExtensions/li/traitDefStage</xpath>
+				<value>
+					<li>
+						<key>RT_Athletic</key>
+						<value>0</value>
+					</li>
+					<li>
+						<key>RT_Energetic</key>
+						<value>0</value>
+					</li>
+				</value>				
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/WeaponTraitDef[defName = "HungerMaker"]/modExtensions/li/traitDefStage</xpath>
+				<value>
+					<li>
+						<key>RT_Ravenous</key>
+						<value>0</value>
+					</li>
+					<li>
+						<key>RT_ImpatientCook</key>
+						<value>0</value>
+					</li>
+				</value>				
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/WeaponTraitDef[defName = "Jealous"]/modExtensions/li/traitDefStage</xpath>
+				<value>
+					<li>
+						<key>RT_Incompetent</key>
+						<value>0</value>
+					</li>
+				</value>				
+			</li>
+		</operations>
+	</match>
+</Operation>
+</Patch>
+

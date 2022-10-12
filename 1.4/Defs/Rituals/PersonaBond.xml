@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	
+	
+	<!--Ritual Pattern-->
+	<RitualPatternDef>
+		<defName>PB_BondRitual_Pattern</defName>
+		<ritualExplanation>A ceremeony of the formation of a bond between weapon and owner. The future of their bond depends on good first impressions</ritualExplanation>
+		<ritualObligationTargetFilter>PB_BondRitualTarget</ritualObligationTargetFilter>
+		<ritualBehavior>PB_BondRitualBehavior</ritualBehavior>
+		<alwaysStartAnytime>true</alwaysStartAnytime>
+		<ritualOutcomeEffect>PB_BondRitualOutcome</ritualOutcomeEffect>
+	</RitualPatternDef>
+
+	<!--Ritual Behavior-->
+	<RitualBehaviorDef>
+		<defName>PB_BondRitualBehavior</defName>
+		<durationTicks>5000</durationTicks>
+		<workerClass>PersonaBond.RitualBehaviorWorker_BondRitual</workerClass>
+		<roles>
+		  <li Class="PersonaBond.RitualRoleBonder">
+			<label>bonder</label>
+			<id>PB_Bonder</id>
+			<maxCount>1</maxCount>
+			<substitutable>True</substitutable>
+			<required>True</required>
+			<countsAsParticipant>False</countsAsParticipant>
+		  </li>
+		</roles>
+		<stages>
+			<li Class="RitualStage_WaitingForParticipants">
+				<defaultDuty>Spectate</defaultDuty>
+				<endTriggers>
+					<li Class="StageEndTrigger_RolesArrived">
+						<roleIds>
+						  <li>PB_Bonder</li>
+						</roleIds>
+					</li>	
+				</endTriggers>				
+				<roleBehaviors>
+				  <li>
+					<roleId>PB_Bonder</roleId>
+					<dutyDef>PB_TakeWeaponToCell</dutyDef>
+				  </li>					  
+				</roleBehaviors>
+			</li>    
+			<li>
+				<defaultDuty>Spectate</defaultDuty>
+				<endTriggers>
+				  <li Class="StageEndTrigger_DurationPercentage">
+					<percentage>0.3</percentage>
+				  </li>
+				</endTriggers>
+				<roleBehaviors>
+				  <li>
+					<roleId>PB_Bonder</roleId>
+					<dutyDef>PB_BondCustomize</dutyDef>
+					<speakerInteraction>Speech_Duel</speakerInteraction>
+					<customPositions>
+					  <li Class="RitualPosition_Lectern">
+						<maxDistanceToFocus>5</maxDistanceToFocus>
+					  </li>
+					  <li Class="RitualPosition_OnInteractionCell" />
+					</customPositions>
+				  </li>
+				</roleBehaviors>
+				<visualEffectDef>Speech</visualEffectDef>
+				<postAction Class="RitualStageAction_Message">
+					<text>{0}: The speech is over, the bonding is beginning</text>
+					<messageTypeDef>NeutralEvent</messageTypeDef>
+				</postAction>				
+			</li>
+			<li>
+				<defaultDuty>Spectate</defaultDuty>
+				<endTriggers>
+				  <li Class="StageEndTrigger_DurationPercentage">
+					<percentage>0.7</percentage>
+				  </li>
+				</endTriggers>
+				<spectateDistanceOverride>3~4</spectateDistanceOverride>
+				<roleBehaviors>
+				  <li>
+					<roleId>PB_Bonder</roleId>
+					<dutyDef>PB_Bonding</dutyDef>
+					<customPositions>
+					  <li Class="RitualPosition_Lectern">
+						<maxDistanceToFocus>5</maxDistanceToFocus>
+					  </li>
+					  <li Class="RitualPosition_OnInteractionCell" />
+					</customPositions>
+				  </li>		
+				</roleBehaviors>
+				<visualEffectDef>Speech</visualEffectDef>
+			</li>
+		</stages>
+  </RitualBehaviorDef>
+   
+
+
+
+   
+  <!--Ritual Outcome-->
+    <RitualOutcomeEffectDef>
+	<defName>PB_BondRitualOutcome</defName>
+    <description>Depending on ritual quality, participants will get between {MINMOOD} and {MAXMOOD} mood for {MOODDAYS} days.</description>
+    <workerClass>PersonaBond.RitualOutcomeEffectWorker_Persona</workerClass>
+    <allowAttachableOutcome>false</allowAttachableOutcome>
+	<startingQuality>0.25</startingQuality>
+    <outcomeChances>
+      <li>
+        <label>Terrible</label>
+        <chance>0.20</chance>
+        <memory>PB_TerribleBond</memory>
+        <description>The {0} was terrible. We could all feel the sting of rejection</description>
+        <positivityIndex>-1</positivityIndex>
+      </li>
+      <li>
+        <label>Normal</label>
+        <chance>0.55</chance>
+        <memory>PB_NormalBond</memory>
+        <description>The {0} was good. They will get along fairly well.</description>
+        <positivityIndex>1</positivityIndex>
+      </li>
+      <li>
+        <label>Amazing</label>
+        <chance>0.25</chance>
+        <memory>PB_AmazingBond</memory>
+        <description>The {0} was electrifying. Those two are truly made for eachother.</description>
+        <positivityIndex>2</positivityIndex>
+      </li>
+    </outcomeChances>
+	<comps>
+	<li Class="PersonaBond.RitualOutcomeComp_BondTraits">
+		<label>bond strength</label>
+	</li>
+    </comps>
+  </RitualOutcomeEffectDef>
+ 
+   <!--Ritual Obligation-->	
+	<RitualObligationTargetFilterDef>
+		<defName>PB_BondRitualTarget</defName>
+		<workerClass>PersonaBond.RitualObligationTargetWorker_Persona</workerClass>		
+	</RitualObligationTargetFilterDef>
+	
+
+</Defs>

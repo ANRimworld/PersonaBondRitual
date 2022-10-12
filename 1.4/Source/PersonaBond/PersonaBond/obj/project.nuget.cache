@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "MjfPC7eOqOkHpyUrC19+eRCPy+DyWh7b9HyAkguiRQfPUjbQ1ektwL9P5SwyNGuGc0HGhYcar5+MpTxzC8r8IQ==",
+  "success": true,
+  "projectFilePath": "C:\\Rimworld_Debug\\RimWorld\\Mods\\PersonaBondRitual\\1.4\\Source\\PersonaBond\\PersonaBond\\PersonaBond.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Allie\\.nuget\\packages\\lib.harmony\\2.2.1\\lib.harmony.2.2.1.nupkg.sha512"
+  ],
+  "logs": []
+}

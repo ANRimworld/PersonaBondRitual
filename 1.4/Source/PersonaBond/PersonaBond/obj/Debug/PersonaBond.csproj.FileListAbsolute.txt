@@ -1,0 +1,12 @@
+C:\Rimworld_Debug\RimWorld\Mods\PersonaBondRitual\1.3\Source\PersonaBond\AlphaMemes\obj\Debug\PersonaBond.csproj.AssemblyReference.cache
+C:\Rimworld_Debug\RimWorld\Mods\PersonaBondRitual\1.3\Source\PersonaBond\AlphaMemes\obj\Debug\PersonaBond.csproj.CoreCompileInputs.cache
+C:\Rimworld_Debug\RimWorld\Mods\PersonaBondRitual\1.3\Source\PersonaBond\PersonaBond\obj\Debug\PersonaBond.csproj.AssemblyReference.cache
+C:\Rimworld_Debug\RimWorld\Mods\PersonaBondRitual\1.3\Source\PersonaBond\PersonaBond\obj\Debug\PersonaBond.csproj.CoreCompileInputs.cache
+C:\Rimworld_Debug\RimWorld\Mods\PersonaBondRitual\1.3\Assemblies\PersonaBond.dll
+C:\Rimworld_Debug\RimWorld\Mods\PersonaBondRitual\1.3\Assemblies\PersonaBond.pdb
+C:\Rimworld_Debug\RimWorld\Mods\PersonaBondRitual\1.3\Source\PersonaBond\PersonaBond\obj\Debug\PersonaBond.dll
+C:\Rimworld_Debug\RimWorld\Mods\PersonaBondRitual\1.3\Source\PersonaBond\PersonaBond\obj\Debug\PersonaBond.pdb
+C:\Rimworld_Debug\RimWorld\Mods\PersonaBondRitual\1.4\Assemblies\PersonaBond.dll
+C:\Rimworld_Debug\RimWorld\Mods\PersonaBondRitual\1.4\Source\PersonaBond\PersonaBond\obj\Debug\PersonaBond.csproj.AssemblyReference.cache
+C:\Rimworld_Debug\RimWorld\Mods\PersonaBondRitual\1.4\Source\PersonaBond\PersonaBond\obj\Debug\PersonaBond.csproj.CoreCompileInputs.cache
+C:\Rimworld_Debug\RimWorld\Mods\PersonaBondRitual\1.4\Source\PersonaBond\PersonaBond\obj\Debug\PersonaBond.dll

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Traits Expanded</li> <!-- Checks for this mod, if not active there is no reason to add values -->
+    </mods>
+    <match Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/WeaponTraitDef[defName = "ThoughtKind"]/modExtensions/li/traitDefStage</xpath>
+				<value>
+					<li>
+						<key>VTE_FunLoving</key>
+						<value>0</value>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/WeaponTraitDef[defName = "ThoughtCalm"]/modExtensions/li/traitDefStage</xpath>
+				<value>
+					<li>
+						<key>VTE_Dunce</key>
+						<value>0</value>
+					</li>
+					<li>
+						<key>VTE_Stoner</key>
+						<value>0</value>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/WeaponTraitDef[defName = "OnKill_ThoughtBad"]/modExtensions/li/traitDefStage</xpath>
+				<value>
+					<li>
+						<key>VTE_Coward</key>
+						<value>0</value>
+					</li>
+					<li>
+						<key>VTE_Submissive</key>
+						<value>0</value>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/WeaponTraitDef[defName = "ThoughtMuttering"]/modExtensions/li/traitDefStage</xpath>
+				<value>
+					<li>
+						<key>VTE_Anxious</key>
+						<value>0</value>
+					</li>
+					<li>
+						<key>VTE_Eccentric</key>					
+						<value>0</value>
+					</li>
+					<li>
+						<key>VTE_Schizoid</key>
+						<value>0</value>						
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/WeaponTraitDef[defName = "ThoughtWailing"]/modExtensions/li/traitDefStage</xpath>
+				<value>
+					<li>
+						<key>VTE_Anxious</key>
+						<value>0</value>
+					</li>
+					<li>
+						<key>VTE_Eccentric</key>					
+						<value>0</value>
+					</li>
+					<li>
+						<key>VTE_Schizoid</key>
+						<value>0</value>						
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/WeaponTraitDef[defName = "OnKill_ThoughtGood"]/modExtensions/li/traitDefStage</xpath>
+				<value>
+					<li>
+						<key>VTE_Vengeful</key>
+						<value>0</value>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/WeaponTraitDef[defName = "NeedKill"]/modExtensions/li/traitDefStage</xpath>
+				<value>
+					<li>
+						<key>VTE_Insatiable</key>
+						<value>0</value>
+					</li>
+					<li>
+						<key>VTE_Brave</key>
+						<value>0</value>
+					</li>
+				</value>				
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/WeaponTraitDef[defName = "PsyfocusMeditationBonus"]/modExtensions/li/traitDefStage</xpath>
+				<value>
+					<li>
+						<key>VTE_Neat</key>
+						<value>0</value>
+					</li>
+					<li>
+						<key>VTE_ChildOfMountain</key>
+						<value>0</value>
+					</li>
+
+					<li>
+						<key>VTE_ChildOfSea</key>
+						<value>0</value>
+					</li>
+				</value>				
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/WeaponTraitDef[defName = "NoPain"]/modExtensions/li/traitDefStage</xpath>
+				<value>
+					<li>
+						<key>VTE_ThickSkinned</key>
+						<value>0</value>
+					</li>
+				</value>				
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/WeaponTraitDef[defName = "SpeedBoost"]/modExtensions/li/traitDefStage</xpath>
+				<value>
+					<li>
+						<key>VTE_MartialArtist</key>
+						<value>0</value>
+					</li>
+				</value>				
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/WeaponTraitDef[defName = "HungerMaker"]/modExtensions/li/traitDefStage</xpath>
+				<value>
+					<li>
+						<key>VTE_IronStomach</key>
+						<value>0</value>
+					</li>
+					<li>
+						<key>VTE_RefinedPalate</key>
+						<value>0</value>
+					</li>
+					<li>
+						<key>VTE_Gastronomist</key>
+						<value>0</value>
+					</li>
+				</value>				
+			</li>
+
+		</operations>
+	</match>
+</Operation>
+</Patch>
+
