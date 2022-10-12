@@ -50,7 +50,7 @@ namespace PersonaBond
                     List<Thing> temp = Find.CurrentMap.listerThings.ThingsOfDef(thingDefs[i]).ToList();
                     if (pawn != null)
                     {
-                        foreach (Thing thing in temp)
+                        foreach (Thing thing in temp.ToList())
                         {
                             if (!EquipmentUtility.CanEquip(thing, pawn) || !pawn.CanReserveAndReach(thing,PathEndMode.Touch,Danger.Deadly,ignoreOtherReservations: true))
                             {
